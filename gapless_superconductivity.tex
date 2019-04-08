@@ -1,0 +1,75 @@
+\documentclass{article}
+%\documentclass[journal]{IEEEtran}
+%\documentclass{report}
+%\documentclass{ActaOulu}
+
+\usepackage{graphicx}
+\usepackage{mathtools}
+
+\begin{document}
+
+\title{Gapless Superconductivity Overview}
+\author{Damir Hadiiev}
+
+\maketitle
+
+\begin{abstract}
+This document contains the brief overview of the gapless superconductivity results
+shown in Maki's review.
+\end{abstract}
+
+
+%\chapter{First Chapter}
+
+\section{Introduction}
+
+Superconducting energy gap - it's energy range of supressed density of the electrons
+states around Fermi energy, this feature usually considered as key attribute of 
+the superconductivity. Abrikosov and Gor'kov had discovered the "gapless behavior"
+during the study of the effect of magnetic impurities on superconductivity.
+
+Common aspects:
+\begin{enumerate}
+\item The external perturbation breaks the time-reversal symmetry of the electron system.
+\item Dissipation mechanism, mixing the time-reversed states is involved.
+\end{enumerate}
+
+\section{Time-reversal symmetry}
+
+Superconductivity is understood as the corellation of electrons in pairs formed with
+mutually time-reversed states(i.e., opposite momenta and spins). Term "time-reversal
+symmetry", used here, referring to the symmetry of the electron system.
+
+\subsection {4D-Repersentation}
+Let's use a spinor representation of the single-particle (or hole) state as follows:
+\begin{equation}
+\Psi(x)=
+\begin{pmatrix}
+    \psi_\uparrow(x) \\
+    \psi_\downarrow(x) \\
+    \psi^\dagger_\uparrow(x) \\
+    \psi^\dagger_\downarrow(x) \\
+\end{pmatrix}
+\textrm{, and }
+\Psi^\dagger(x)=
+\begin{pmatrix}
+    \psi^\dagger_\uparrow(x) & \psi^\dagger_\downarrow(x) & \psi_\uparrow(x) & \psi_\downarrow(x)
+\end{pmatrix}
+\end{equation}
+
+In terms of these field operators the BCS Hamiltonian is written.
+\begin{equation}
+    \mathit{H_0}=
+    \sum_{\substack{
+        \sigma
+    }}
+    \int{
+        \psi^\dagger_\sigma\left(-\frac{1}{2m}\nabla^2-\mu\right)\psi_\sigma{d^3}x
+    }
+    {\textrm{+V}}
+    \int{
+        (\psi^\dagger(x)\psi(x))(\psi^\dagger(x)\psi(x)){d^3}x
+    }
+\end{equation}
+
+\end{document}
