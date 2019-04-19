@@ -9,7 +9,6 @@
 \begin{document}
 
 \title{Gapless Superconductivity Overview}
-\author{Damir Hadiiev}
 
 \maketitle
 
@@ -41,6 +40,77 @@ mutually time-reversed states(i.e., opposite momenta and spins). Term "time-reve
 symmetry", used here, referring to the symmetry of the electron system.
 
 \subsection {4D-Repersentation}
+
+Reduced Hamiltonian:
+\begin{equation}
+   H=\sum_{\substack{
+    k,\sigma
+   }}
+   \epsilon_k
+   n_{k\sigma}
+   +
+   \sum_{\substack{
+      k,l
+    }}
+    V_{k,l}
+    c^{\dagger}_{k, \uparrow}
+    c^{\dagger}_{-k, \downarrow}
+    c_{-l, \uparrow}
+    c_{l, \downarrow}
+\end{equation}
+
+Assuming that states for the fermions are given:
+\begin{equation}
+    |\uparrow\rangle = 
+    \begin{pmatrix}
+        1 \\
+        0 \\
+    \end{pmatrix}
+    \textrm{, and }
+    |\downarrow\rangle = 
+    \begin{pmatrix}
+        0 \\
+        1 \\
+    \end{pmatrix}
+\end{equation}
+
+Than operator of quantity of the particles in state s should be given:
+\begin{equation}
+    n_s = n_{k\sigma} = c^{\dagger}_{k,\sigma}c_{k,\sigma} =
+    \begin{pmatrix}
+        0 & 0 \\
+        0 & 1 \\
+    \end{pmatrix}
+\end{equation}
+
+Creation, annihilation operators are:
+\begin{equation}
+    c^{\dagger}_{k, \sigma} = \begin{pmatrix}
+        0 & 0 \\
+        1 & 0 \\
+    \end{pmatrix}
+    \textrm{, and }
+    c_{k, \sigma} = \begin{pmatrix}
+        1 & 0 \\
+        0 & 0 \\
+    \end{pmatrix}
+\end{equation}
+
+
+Field operators of these states should be given as the Fourier-transform.
+\begin{equation}
+    \psi^{\dagger}(x) =
+    \int{
+        \frac{d^3k}{(2\pi)^\frac{1}{2}}e^{-ikx}c^{\dagger}_k
+    }
+    \textrm{, and }
+    \psi(x) =
+    \int{
+        \frac{d^3k}{(2\pi)^\frac{1}{2}}e^{ikx}c_k
+    }
+\end{equation}
+
+
 Let's use a spinor representation of the single-particle (or hole) state as follows:
 \begin{equation}
 \Psi(x)=
@@ -57,11 +127,11 @@ Let's use a spinor representation of the single-particle (or hole) state as foll
 \end{pmatrix}
 \end{equation}
 
-In terms of these field operators the BCS Hamiltonian is written.
+Hamiltonian in terms of the field operators.
 \begin{equation}
     \mathcal{H}_0=
     \sum_{\substack{
-        \sigma
+        \sigma=\uparrow,\downarrow
     }}
     \int{
         \psi^\dagger_\sigma\left(-\frac{1}{2m}\nabla^2-\mu\right)\psi_\sigma{d^3}x
